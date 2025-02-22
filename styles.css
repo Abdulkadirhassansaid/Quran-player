@@ -1,0 +1,392 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: #2e2b26;
+    color: #f5f3f0;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Header / Navigation */
+  .site-header {
+    background: #3c3833;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    color: #a67c52;
+    font-weight: 700;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar ul li {
+    margin-left: 25px;
+  }
+  
+  .navbar ul li a {
+    color: #f5f3f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    color: #a67c52;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #f5f3f0;
+    margin: 4px 0;
+    transition: all 0.3s;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 60px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #d4af7f;
+  }
+  
+  /* Player Section (Vintage Radio Look) */
+  .player-section .player-card {
+    background: #3c3833;
+    border: 2px solid #a67c52;
+    border-radius: 15px;
+    padding: 30px;
+    width: 360px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  }
+  
+  .cover-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #a67c52;
+    transition: transform 0.3s ease;
+  }
+  
+  .cover-image.playing {
+    transform: scale(1.05);
+  }
+  
+  .player-card h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #d4af7f;
+  }
+  
+  .player-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #c5b299;
+  }
+  
+  /* Progress Bar */
+  .progress-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+  }
+  
+  .progress-container span {
+    font-size: 0.9rem;
+    width: 40px;
+    color: #c5b299;
+  }
+  
+  .progress-bar {
+    flex: 1;
+    height: 6px;
+    background: #504a45;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 10px;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #a67c52;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+  
+  /* Controls */
+  .controls {
+    margin: 15px 0;
+  }
+  
+  .controls button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #a67c52;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .controls button:hover {
+    transform: scale(1.2);
+    color: #f5f3f0;
+  }
+  
+  /* Volume & Speed Controls */
+  .volume-speed-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .control-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .control-group i {
+    font-size: 1rem;
+    margin-right: 6px;
+    color: #a67c52;
+  }
+  
+  /* Professional Volume Control Slider */
+  .volume-speed-controls input[type="range"] {
+    -webkit-appearance: none;
+    width: 120px;
+    height: 4px;
+    border-radius: 5px;
+    background: #ccc;
+    outline: none;
+    transition: background 0.2s ease;
+  }
+  
+  .volume-speed-controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #3498db;
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  
+  .volume-speed-controls input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+  }
+  
+  .volume-speed-controls input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #3498db;
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  
+  .volume-speed-controls input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.1);
+  }
+  
+  .control-group select {
+    border: 1px solid #a67c52;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 0.9rem;
+    background: #504a45;
+    color: #f5f3f0;
+  }
+  
+  /* Selectors */
+  .selectors select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #a67c52;
+    font-size: 1rem;
+    background: #504a45;
+    color: #f5f3f0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .selectors select:hover {
+    background: #5c554e;
+  }
+  
+  /* Features Section - Improved */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .feature-card {
+    background: #3c3833;
+    border: 1px solid #a67c52;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .feature-card i {
+    font-size: 2.5rem;
+    color: #a67c52;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #d4af7f;
+  }
+  
+  .feature-card p {
+    font-size: 0.95rem;
+    color: #c5b299;
+  }
+  
+  /* About & Contact Sections */
+  .section p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .contact-icons {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .contact-icons a {
+    color: #a67c52;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-icons a:hover {
+    color: #f5f3f0;
+    transform: scale(1.1);
+  }
+  
+  /* Footer */
+  .site-footer {
+    background: #3c3833;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #a67c52;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #3c3833;
+      width: 200px;
+      display: none;
+      padding: 10px 0;
+      border-radius: 0 0 8px 8px;
+    }
+    .navbar ul.active {
+      display: flex;
+    }
+    .navbar ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .player-card,
+    .section {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .controls button {
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+    .volume-speed-controls input[type="range"] {
+      width: 100px;
+    }
+  }
+  

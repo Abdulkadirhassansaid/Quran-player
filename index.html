@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quran Player &amp; More</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Google Fonts: Raleway and Merriweather for retro vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">Quran Player</h1>
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#player">Player</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Player Section -->
+      <section id="player" class="section player-section">
+        <div class="player-card">
+          <img
+            src="https://source.unsplash.com/featured/?quran"
+            alt="Reciter Image"
+            class="cover-image"
+            id="reciterImage"
+          />
+          <h2 id="surahTitle">Surah Title</h2>
+          <p id="reciterName">Reciter Name</p>
+
+          <div class="progress-container">
+            <span id="currentTime">0:00</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span id="duration">0:00</span>
+          </div>
+
+          <div class="controls">
+            <button id="prevButton"><i class="fas fa-backward"></i></button>
+            <button id="playPauseButton"><i class="fas fa-play"></i></button>
+            <button id="nextButton"><i class="fas fa-forward"></i></button>
+          </div>
+
+          <div class="volume-speed-controls">
+            <div class="control-group">
+              <i class="fas fa-volume-up"></i>
+              <input
+                type="range"
+                id="volumeControl"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.5"
+              />
+            </div>
+            <div class="control-group">
+              <label for="speedControl">Speed</label>
+              <select id="speedControl">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="selectors">
+            <select id="reciterSelect">
+              <option value="">Select Reciter</option>
+            </select>
+            <select id="chapterSelect">
+              <option value="">Select Surah</option>
+            </select>
+          </div>
+
+          <audio id="audioPlayer"></audio>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="section">
+        <div class="container">
+          <h2>Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <i class="fas fa-play-circle"></i>
+              <h3>Instant Playback</h3>
+              <p>Seamless controls for instant play, pause, and track navigation.</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-sync-alt"></i>
+              <h3>Auto-Advance</h3>
+              <p>Automatically moves to the next Ayah or Surah for continuous recitation.</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-volume-up"></i>
+              <h3>Precise Controls</h3>
+              <p>Adjust volume and speed to tailor your listening experience.</p>
+            </div>
+            
+            <div class="feature-card">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>Fully Responsive</h3>
+              <p>Optimized for all devices – from desktop to mobile.</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-cogs"></i>
+              <h3>Modern Tech</h3>
+              <p>Integrates advanced functionality with a timeless design.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            The Quran Player is crafted with a perfect blend of tradition and innovation.
+            Designed to offer a serene and seamless audio experience, it brings the timeless beauty
+            of Quran recitations to modern devices. Our focus on intuitive design and robust functionality
+            makes it the ideal companion for anyone wishing to immerse themselves in the Quranic verses.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>
+            Developed by Eng Abdulkadir Hassan. For inquiries, suggestions, or support, please get in touch.
+          </p>
+          <div class="contact-icons">
+            <a href="mailto:your.abdikadirhassan2015@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/+252613471566" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 Quran Player. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
