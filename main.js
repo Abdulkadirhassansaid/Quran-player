@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const reciterImagesById = {
       "ar.abdulbasitmurattal": "https://static.qurancdn.com/images/reciters/1/abdelbasset-profile.jpeg?v=1",
       "ar.basfar": "https://www.assabile.com/media/person/200x256/abdullah-ibn-ali-basfar.png",
-      "ar.sudais": "https://i1.sndcdn.com/artworks-000534137712-6nu5a2-t500x500.jpg",
+      "ar.sudais": "https://www.islamicity.org/wp-content/plugins/blueprint-timthumb/timthumb.php?src=http://media.islamicity.org/wp-content/uploads/2019/06/abdul-rahman-al-sudais-81.jpg&w=350&h=350",
       "ar.abdulsamad": "https://tvquran.com/uploads/authors/images/%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%A8%D8%A7%D8%B3%D8%B7%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B5%D9%85%D8%AF.jpg",
       "ar.abu_bakr": "https://tvquran.com/uploads/authors/images/%D8%B4%D9%8A%D8%AE%20%D8%A3%D8%A8%D9%88%20%D8%A8%D9%83%D8%B1%20%D8%A7%D9%84%D8%B4%D8%A7%D8%B7%D8%B1%D9%8A.jpg",
       "ar.ahmed_ibn_ajamy": "https://www.assabile.com/media/photo/full_size/ahmed-al-ajmi-979.jpg",
