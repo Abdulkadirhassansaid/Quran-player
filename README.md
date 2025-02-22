@@ -11,13 +11,7 @@ A modern, responsive, and feature-rich Quran Player that combines traditional re
 
 - [Overview](#overview)
 - [Features](#features)
-- [Demo](#demo)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Demo](#demo).
 
 ## Overview
 
